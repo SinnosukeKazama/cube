@@ -7,7 +7,7 @@ int main(int ac, char **av)
 
 	if (ac != 4)
 	{
-		printf("Error");
+		ft_putstr("Error");
 		return (0);
 	}
 	crnt.x = 0;

@@ -79,3 +79,39 @@ int	ft_atoi(char *s)
 	}
 	return (sum * posi);
 }
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char	*s)
+{
+	if (*s == '\0')
+		return ;
+	else
+	{
+		ft_putchar(s[0]);
+		ft_putstr(&s[1]);
+	}
+}
+
+void	ft_putnum(int n)
+{
+	int	i;
+	unsigned int	ln;
+
+	if (n < 0)
+	{
+		n *= -1;
+		ft_putchar('-');
+	}
+	ln = (unsigned int)n;
+	if (n < 10)
+		ft_putchar(n + '0');
+	else
+	{
+		ft_putnum(n / 10);
+		ft_putnum(n % 10);
+	}
+}

@@ -9,14 +9,16 @@ void	out_sizeofside(data d)
 	i = -1;
 	while (++i < d.D)
 	{
-		printf("z=%d\n", i);
+		ft_putstr("z=");
+		ft_putnum(i);
+		ft_putchar('\n');
 		j = -1;
 		while (++j < d.H)
 		{
 			k = -1;
 			while (++k < d.W)
-				printf("%d,", d.sizeofside[i][j][k]);
-			printf("\n");
+				ft_putnum(d.sizeofside[i][j][k]);
+			ft_putchar('\n');
 		}
 	}
 }
@@ -30,14 +32,16 @@ void	out_map(data d)
 	i = -1;
 	while (++i < d.D)
 	{
-		printf("z=%d\n",i);
+		ft_putstr("z=");
+		ft_putnum(i);
+		ft_putchar('\n');
 		j = -1;
 		while (++j < d.H)
 		{
 			k = -1;
 			while (++k < d.W)
-				printf("%c ", d.map[i][j][k]);
-			printf("\n");
+				ft_putchar(d.map[i][j][k]);
+			ft_putchar('\n');
 		}
 	}
 }

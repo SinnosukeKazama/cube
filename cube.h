@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -38,3 +38,6 @@ char	*ft_char_calloc(int en, char c);
 int	ft_strlen(char *s);
 int	ft_power(int b, int e);
 int	ft_atoi(char *s);
+void	ft_putchar(char c);
+void	ft_putstr(char *s);
+void	ft_putnum(int n);

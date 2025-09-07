@@ -10,7 +10,6 @@
 
 補足：：：：
 bsqの課題をもとに作った。以下課題規則から外れている点。
-write関数で文字を出力。 -> printf関数で文字を出力。
 MkFileを扱っていない。
 コマンドライン引数からマップファイルを指定(プログラムがマップファイルを読み込む）。 -> コマンドライン引数からマップ奥縦横の大きさを指定(プログラム内でマップ生成)。
 
@@ -29,7 +28,7 @@ main();
 
 sides_data();
 	solver_sizeofside();
-write_sq();
+write_cb();
 	solve_max();
 <memory.c>
 allocate_data();
@@ -48,6 +47,10 @@ ft_char_calloc();
 ft_atoi();
 	ft_strlen();
 	ft_power();
+ft_putnum();
+	ft_putchar();
+ft_putstr();
+	ft_putchar();
 
 *インデントは関数f内で関数gが呼び出されていることを表す。(同一ファイル内にある関数に限る。）
 f();
