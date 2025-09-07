@@ -98,20 +98,19 @@ void	ft_putstr(char	*s)
 
 void	ft_putnum(int n)
 {
-	int	i;
-	unsigned int	ln;
+	long int	ln;
 
-	if (n < 0)
+	ln = (long int)n;
+	if (ln < 0)
 	{
-		n *= -1;
+		ln *= -1;
 		ft_putchar('-');
 	}
-	ln = (unsigned int)n;
-	if (n < 10)
-		ft_putchar(n + '0');
+	if (ln < 10)
+		ft_putchar(ln + '0');
 	else
 	{
-		ft_putnum(n / 10);
-		ft_putnum(n % 10);
+		ft_putnum(ln / 10);
+		ft_putnum(ln % 10);
 	}
 }
